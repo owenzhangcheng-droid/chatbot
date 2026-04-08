@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Chatbot - Group 11</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff6600;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    .main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .intro-box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .intro-box p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .examples {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .examples h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .examples ul {
+      padding-left: 20px;
+      color: #555;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .examples ul li span {
+      background-color: #fff3e0;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🍽️ Philadelphia Restaurant Chatbot</h1>
+    <p>Group 11 —  Data Science Applications Project</p>
+  </header>
+
+  <div class="main">
+
+    <div class="intro-box">
+      <h2>About this chatbot</h2>
+      <p>
+        This is a restaurant recommendation chatbot built using the Yelp Open Dataset (Philadelphia).
+        It uses machine learning models for intent detection and a content-based recommender system
+        to suggest restaurants based on your preferences.
+      </p>
+      <p>
+        Click the chat icon in the bottom-right corner to start a conversation!
+      </p>
+    </div>
+
+    <div class="examples">
+      <h2>Try asking:</h2>
+      <ul>
+        <li><span>"Recommend a sushi restaurant"</span></li>
+        <li><span>"Find me cheap pizza places"</span></li>
+        <li><span>"Find restaurants similar to Tuna Bar"</span></li>
+        <li><span>"Tell me about BAP"</span></li>
+        <li><span>"Find highly rated Korean restaurants"</span></li>
+        <li><span>"I want delivery"</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Built with Dialogflow · Flask · Ngrok · Yelp Open Dataset</p>
+    <p>Group 11 | DTI 5125</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Restaurant_Bot_Group11"
+    agent-id="3d52d7f8-3ee0-4f59-911a-698605d674d5"
+    language-code="en"
+  ></df-messenger>
+
+</body>
+</html>
